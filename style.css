@@ -2,6 +2,7 @@
   --sidebar-bg: #6aade4;
   --card-yellow: #facc15;
   --content-gray: #e2e8f0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 *,
@@ -36,7 +37,7 @@ body {
   justify-items: start;
   margin: 0;
   padding: 2rem;
-  height: 100vh;
+  height: 100%;
   background-color: var(--sidebar-bg);
 }
 
@@ -47,11 +48,6 @@ body {
 
 .nav-item {
   display: flex;
-}
-
-.card {
-  width: 100px;
-  color: black;
 }
 
 .button-container img {
@@ -67,14 +63,10 @@ img {
   grid-template-columns: 2fr 1fr;
   grid-template-rows: repeat(2, 1fr);
   grid-area: header;
-  padding: 2rem 4rem;
+  padding: 0rem 4rem 2rem;
   color:black;
   box-shadow: 0px 2px 3px rgb(167, 167, 167);
-}
-
-.avatar-username {
-  font-size: 1rem;
-  color:black;
+  gap: 10px;
 }
 
 #profile-section img {
@@ -129,15 +121,66 @@ img {
 #avatar-section {
     display: grid;
     justify-content: space-evenly;
-    width: 60%;
+    width: 80%;
 }
 
 .greeting {
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 .profile-username {
   font-weight:bold;
   font-size: 2rem;
+}
+
+h2, h3 {
+  color: black;
+}
+
+.greeting-container {
+  display:flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.avatar-username {
+  font-size: 1.5rem;
+  color:black;
+  font-weight: bold;
+}
+
+#main-content {
+  display: grid;
+  padding: 2rem;
+  grid-template-columns: 3fr 2fr;
+  color: black;
+  background-color: var(--content-gray);
+}
+
+.cards-container {
+  display: grid;
+  grid-template-rows: repeat(3,2fr);
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  margin-top: 0.5rem;
+  gap: 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  width: 350px;
+  height: 100%;
+}
+
+.card > .button-container {
+  justify-self: end;
+}
+
+.button-container {
+  align-self: end;
+  justify-self: end;
 }
