@@ -2,6 +2,7 @@
   --sidebar-bg: #6aade4;
   --card-yellow: #f1bf1a;
   --content-gray: #e2e8f0;
+  --text-gray: rgb(95, 95, 95);
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -186,13 +187,20 @@ h2, h3 {
   align-self: end;
 }
 
+.right {
+  display: flex;
+  margin-left: auto;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .announcement-card {
   display: flex;
   flex-direction:column;
   background: white;
-  padding: 1rem;
+  padding: 0rem 1rem;
   height: fit-content;
-  width: 250px;
+  width: 300px;
   border-radius: 5px;
 }
 
@@ -205,6 +213,36 @@ h2, h3 {
   border-bottom: none;
 }
 
-.right {
-  margin-left: auto;
+.trending-card {
+  display: flex;
+  flex-direction:column;
+  background: white;
+  padding: 1rem;
+  height: fit-content;
+  width: 300px;
+  border-radius: 5px;
+  gap: 15px;
+}
+
+.trending-card img {
+  width: 50px;
+}
+
+.card-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.card-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.handle {
+  font-weight: bold;
+}
+
+.bio, .announcement-paragraph, .card-info {
+  color: var(--text-gray);
 }
